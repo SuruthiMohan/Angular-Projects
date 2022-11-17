@@ -5,13 +5,13 @@
           <form #registration="ngForm" autocomplete="off">
             <div class="formdiv">
               <div class="form-floating">
-                <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" id="username" name="username" placeholder="Enter the user name" [(ngModel)]="userData.username">
+                <input type="text" required #name="ngModel" pattern="/^[a-zA-Z ]*$/"   [class.is-invalid]="name.invalid && name.touched" class="form-control" id="username" name="username" placeholder="Enter the user name" [(ngModel)]="userData.username">
                 <label for="username">User Name</label>
                 <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is required</small>
               </div>
 
               <div class="form-floating">
-                <input type="text" required #fullname="ngModel" [class.is-invalid]="fullname.invalid && fullname.touched" class="form-control" id="fullname" name="fullname" placeholder="Enter the Full name" [(ngModel)]="userData.fullname">
+                <input type="text" required #fullname="ngModel" pattern="/^[a-zA-Z ]*$/"  [class.is-invalid]="fullname.invalid && fullname.touched" class="form-control" id="fullname" name="fullname" placeholder="Enter the Full name" [(ngModel)]="userData.fullname">
                 <label for="fullname">Full Name</label>
                 <small class="text-danger" [class.d-none]="fullname.valid || fullname.untouched">Fullname is required</small>
               </div>
