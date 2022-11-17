@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Userdetails } from './userdetails';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'formCreation';
+
+  genders = ["Male","Female"];
+
+  userData = new Userdetails("","","","","");
+
 }
